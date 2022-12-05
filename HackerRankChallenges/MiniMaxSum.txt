@@ -1,0 +1,19 @@
+public static void miniMaxSum(List<int> arr)
+    {
+        // assign min and max to the 1st element of array, on index 0 
+        long min = arr[0], max = arr[0];
+        long sum = 0;
+        // check each element of the arr list
+        foreach (var num in arr)
+        {
+            //add sum of each element of the arr
+            sum += num;
+            // Check if element is greater or equal to max if true assign max to num
+            if(num >= max)
+                max = num;
+            // Check if element is less or equal to min if true assign min to num
+            if(num <= min)
+                min = num;
+        }
+        Console.WriteLine($"{sum - max} {sum - min}");
+    }
