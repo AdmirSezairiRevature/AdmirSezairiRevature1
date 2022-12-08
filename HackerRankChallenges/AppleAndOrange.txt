@@ -1,0 +1,27 @@
+   public static void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
+    {
+            var appleList = new List<int>();
+            var orangeList = new List<int>();
+
+            // Checking if apple is in the range of the house
+            foreach (var item in apples)
+            {
+                if (item + a >= s && item + a <= t)
+                {
+                    appleList.Add(item);
+                }
+            }
+            //Checking if orange is in the range of the house.
+            foreach (var item in oranges)
+            {
+                if (item + b >= s && item + b <= t)
+                {
+                    orangeList.Add(item);
+                }
+            }
+
+            Console.WriteLine(appleList.Count);
+            Console.WriteLine(orangeList.Count);
+    }
+
+}
