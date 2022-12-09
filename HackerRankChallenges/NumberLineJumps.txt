@@ -1,0 +1,21 @@
+public static string kangaroo(int x1 = 0, int v1 = 3, int x2 = 4, int v2 = 2)
+    {
+        var samePoint = "NO";  
+           
+        while(x2 >= x1 && v1 > v2)
+        {    
+            //If both kangaroos are the same point      
+            if(x1 == x2)
+            {
+                samePoint = "YES";
+                break;
+            }
+            else
+            // kangaroos not at the same point
+            {
+                x1 += v1;
+                x2 += v2;
+            }
+        }   
+        return samePoint;
+    }
