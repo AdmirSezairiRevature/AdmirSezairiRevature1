@@ -1,0 +1,24 @@
+ public static string dayOfProgrammer(int year)
+    {
+        // In the Julian calendar, leap years are divisible by 4;
+        var isJulianLeap = year % 4 == 0;
+        
+        //in the Gregorian calendar, leap years are either of the following:
+        //Divisible by 400.
+        //Divisible by 4 and not divisible by 100.
+        var isGregorianLeap = (year % 400 == 0) || 
+                    (year % 4 == 0 && year % 100 != 0);
+        
+        // Day of programer  in 1918 happens on the 26th
+        //Check if the year is 1918
+        if (year == 1918)
+            return $"{13 + 13}.09.{year}";
+        // After 1918 use Julian Calendar
+        //The Day of programmer can occur only in two dates 12 or 13 AFTER 1918
+        else if(year < 1918)
+            return isJulianLeap ? $"12.09.{year}" : $"13.09.{year}";
+        // Before 1918 use Gregorian Calendar
+        //The Day of programmer can occur only in two dates 12 or 13 BEFORE 1918
+        else
+            return isGregorianLeap ? $"12.09.{year}" : $"13.09.{year}";
+    }
