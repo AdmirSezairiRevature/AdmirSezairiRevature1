@@ -1,0 +1,22 @@
+ static string catAndMouse(int x, int y, int z) {
+
+        
+        int distCatA = Math.Abs(x - z);
+        int distCatB = Math.Abs(y - z);
+
+     
+        //if Cat A is further away from the mouse
+        if(distCatA > distCatB){
+            return "Cat B";
+        }
+        //if Cat B is further away from the mouse
+        else if(distCatB > distCatA){
+            return "Cat A";       
+        }
+        // both cats in the same position they will fight mouse runs away
+        else{
+            return "Mouse C";
+        }
+            
+        
+    }
