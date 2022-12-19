@@ -1,0 +1,7 @@
+ public static int hurdleRace(int k, List<int> height)
+    {
+        //if jump greater or equal  to the max jump return 0 no need potion
+        if(k >= height.Max()) return 0;
+        //else return potion required, max height - jump
+        else return height.Max() - k;
+    }
