@@ -1,0 +1,15 @@
+public static int designerPdfViewer(List<int> h, string word)
+    {
+
+        int mx=0;
+
+        for (int i=0; i<word.Length; i++)
+        {
+           //int ind= (int)word[i]-97; since all letters are in lower case, we can do it as well
+           int ind= (int)word[i]%32; //better version, works for both lower and upper cases
+           if (h[ind]> mx) mx=h[ind];
+        }
+        
+        return mx*word.Length;
+
+    }
